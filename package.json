@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "export": "next build",
+    "static": "next build && npx cap sync",
+    "android": "npm run export && npx cap sync android && npx cap open android",
+    "ios": "npm run export && npx cap sync ios && npx cap open ios",
+    "sync": "npm run export && npx cap sync"
   },
   "dependencies": {
     "@capacitor/android": "^8.0.0",
